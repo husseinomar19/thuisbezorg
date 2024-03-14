@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    font-size: 20px;
+}
+h1,h2,h3,p a,p,footer a{
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;     
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav{
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   padding: 60px 150px;
+   width: 100%;
+   height: 10vh;
+   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+}
+header nav a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+   
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+header nav ul li a{
+    text-decoration: none;
+    padding: 20px;
+}
+header nav a img{
+    width: 100px;
+}
+/* hero section */
+.hero{
+    background-image: url(/asset/img/main.jpg); 
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero h2{
+    font-size: 70px;
+    letter-spacing: 1px;
+    color: white;
+}
+.hero a{
+    text-decoration: none;
+    color: white;
+    margin-top: 50px;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.bezorgen{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 80px;
+}
+.bezorgen-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:  column;
+
+}
+.bezorgen-icon i{
+    font-size: 100px;
+
+}
+.bezorgen-icon h2{
+    margin-top: 20px;
+}
+.bezorgen-icon p{
+    width: 60%;
+    text-align: center;
+
+}
+.over-section{
+    width: 100%;
+    padding: 50px 170px 50px 170px; 
+    gap: 350px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.over-detals{
+    width: 50%;
+}
+.foto{
+    padding: 50px 170px 50px 170px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    height: 700px;
+}
+.foto img{
+    height: 100%;
+    width: 100%;
+}
+.teskt-titel{
+    width: 100%;
+    height: 40vh;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teskt-titel h1{
+    font-size: 100px;
+    text-transform: uppercase;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 170px 50px 170px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.logo a img{
+   width: 200px;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+/*
+contact form
+
+
+*/
+.form {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  }
+  
+  .form .title {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form input {
+    outline: 0;
+    border: 1px solid rgb(219, 213, 213);
+    padding: 8px 14px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .form textarea {
+    border-radius: 8px;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    outline: 0;
+    padding: 8px 14px;
+    border: 1px solid rgb(219, 213, 213);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  }
+  
+  .form button {
+    align-self: flex-end;
+    padding: 8px;
+    outline: 0;
+    width: 150px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    color: black;
+    cursor: pointer;
+  }
+      
+
+
+
+
+
+
