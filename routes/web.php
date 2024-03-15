@@ -14,14 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $pageTitle = "Home";
+    return view('welcome',compact('pageTitle'));
 });
 Route::get('/about', function () {
-    return view('about');
+    $pageTitle = "About";
+    return view('about',compact('pageTitle'));
 });
 Route::get('/contact', function () {
-    return view('contact');
+    $pageTitle = "Contact";
+    return view('contact',compact('pageTitle'));
 });
 Route::get('/menu', function () {
-    return view('menu');
+    $pageTitle = "Menu";
+    return view('menu',compact('pageTitle'));
+});
+Route::get('/admin', function () {
+    $pageTitle = "Admin";
+    return view('admin',compact('pageTitle'));
+});
+Route::post('/admin', 'AuthController@login');
+
+Route::get('/dash', function () {
+    $pageTitle = "Admin";
+    return view('dash',compact('pageTitle'));
 });
