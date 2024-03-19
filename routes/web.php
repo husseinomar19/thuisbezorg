@@ -39,3 +39,11 @@ Route::get('/dash', function () {
     $pageTitle = "Admin";
     return view('dash',compact('pageTitle'));
 });
+Route::get('/toevoegen', function () {
+    $pageTitle = "Toeveogen";
+    return view('toevoegen',compact('pageTitle'));
+});
+Route::get('/aanpassen', function () {
+    $pageTitle = "Aanpassen";
+    return view('aanpassen',compact('pageTitle'));
+});

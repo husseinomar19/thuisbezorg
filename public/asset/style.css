@@ -67,6 +67,8 @@ header nav a img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    
 }
 .admin{
     display: flex;
@@ -326,14 +328,28 @@ contact form
     font-size: 1em;
     font-weight: 500;
   }
+  .inputField[type="file"]{
+    border: none;
+    font-size: 15px;
+  }
+  input[type=file]::file-selector-button{
+    border: none;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+
+  }
   
   #button {
     z-index: 2;
     position: relative;
     width: 100%;
     border: none;
-    background-color: rgb(162, 104, 255);
-    height: 30px;
+    /* background-color: rgb(162, 104, 255); */
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    height: 40px;
     color: white;
     font-size: .8em;
     font-weight: 500;
@@ -354,6 +370,25 @@ contact form
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 20px;
+  }
+  .dashborad a{
+    margin: 20px;
+  }
+  .toevoegen-form form{
+    width: 500px !important;
+    height: 600px !important;
+    gap: 20px;
+  }
+  .titel-form{
+    width: 100% !important;
+    text-align: center;
+  }
+  .card img{
+  height: 300px;
+  object-fit: cover;
+  }
+  .card p,i{
+    padding: 20px;
   }
   
   
