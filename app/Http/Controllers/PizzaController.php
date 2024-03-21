@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Models\Menu;
+use App\Models\Menup;
 
 class PizzaController extends Controller
 {
@@ -19,7 +21,7 @@ class PizzaController extends Controller
      */
     public function create()
     {
-        //
+        return(view('toevoegen'));
     }
 
     /**
@@ -27,7 +29,13 @@ class PizzaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $menu = new Menup;
+        $menu->naam =  $request->input( 'naamitem' );
+        $menu->prijs = $request->input( 'prijs' );
+        // $menu->foto = $request->input( 'afbeelding' );
+        $menu->save();
+        
+        return redirect('/menu');
     }
 
     /**

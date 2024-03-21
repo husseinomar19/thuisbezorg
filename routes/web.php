@@ -33,7 +33,9 @@ Route::get('/admin', function () {
     $pageTitle = "Admin";
     return view('admin',compact('pageTitle'));
 });
-Route::post('/admin', 'AuthController@login');
+Route::post('/login', 'AuthController@login')->name('login');
+
+Route::post('/toevoegen', 'App\Http\Controllers\PizzaController@store')->name('item.store');
 
 Route::get('/dash', function () {
     $pageTitle = "Admin";

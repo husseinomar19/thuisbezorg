@@ -3,7 +3,7 @@
 @section('content')
 <div class="admin">
 
- <form action="/admin" class="form_main" method="post">
+ <form action="{{ route('login') }}" class="form_main" method="post">
  @csrf<p class="heading">Login</p>
     <div class="inputContainer">
         <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e" viewBox="0 0 16 16">

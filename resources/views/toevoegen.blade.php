@@ -3,21 +3,21 @@
 @section('content')
 <div class="hero">
 <div class="toevoegen-form">
-<form action="/admin" class="form_main" method="post">
+<form action="{{ route('item.store') }}" class="form_main" method="post">
  @csrf<p class="heading titel-form">Voeg Ithem Toe</p>
     <div class="inputContainer">
         
-    <input type="text" class="inputField" id="naamitem" placeholder="Naam Item">
+    <input type="text" class="inputField" id="naamitem" placeholder="Naam Item" name="naamitem"/>
     </div>
     
 <div class="inputContainer">
     
-    <input type="text" class="inputField" id="prijs" placeholder="Prijs">
+    <input type="text" class="inputField" id="prijs" placeholder="Prijs"  name="prijs"/>
 </div>
-<div class="inputContainer">
+<!-- <div class="inputContainer">
     
-    <input type="file" class="inputField" id="afbeelding" placeholder="Item  afbeelding">
-</div>
+    <input type="file" class="inputField" id="afbeelding" placeholder="Item  afbeelding" name="afbeelding"/>
+</div> -->
               
            
 <button id="button" name="toevoegen">Toevoegen</button>
