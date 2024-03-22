@@ -389,7 +389,15 @@ contact form
   }
   .card p,i{
     padding: 20px;
+    margin: 0;
   }
+  .card a {
+    text-decoration: none;
+    
+    
+  }
+ 
+
   
   
       

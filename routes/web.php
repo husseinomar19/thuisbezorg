@@ -25,27 +25,30 @@ Route::get('/contact', function () {
     $pageTitle = "Contact";
     return view('contact',compact('pageTitle'));
 });
-Route::get('/menu', function () {
-    $pageTitle = "Menu";
-    return view('menu',compact('pageTitle'));
-});
+Route::get('/menu', 'App\Http\Controllers\PizzaController@index');
 Route::get('/admin', function () {
     $pageTitle = "Admin";
     return view('admin',compact('pageTitle'));
 });
-Route::post('/login', 'AuthController@login')->name('login');
+Route::post('/admin', 'App\Http\Controllers\AuthController@login')->name('login');
 
 Route::post('/toevoegen', 'App\Http\Controllers\PizzaController@store')->name('item.store');
+Route::put('/pasmenu/{id}', 'App\Http\Controllers\PizzaController@update')->name('item.update');
+
 
 Route::get('/dash', function () {
     $pageTitle = "Admin";
-    return view('dash',compact('pageTitle'));
+    return view('dash', compact('pageTitle'));
 });
+
 Route::get('/toevoegen', function () {
     $pageTitle = "Toeveogen";
     return view('toevoegen',compact('pageTitle'));
 });
-Route::get('/aanpassen', function () {
-    $pageTitle = "Aanpassen";
-    return view('aanpassen',compact('pageTitle'));
-});
+// Route::get('/aanpassen', function () {
+//     $pageTitle = "Aanpassen";
+//     return view('aanpassen',compact('pageTitle'));
+// });
+Route::get('/aanpassen/{id}', 'App\Http\Controllers\PizzaController@edit')->name('aanpassen');
+Route::get('/verwijderen/{id}', 'App\Http\Controllers\PizzaController@destroy')->name('verwijderen');
+Route::get('/up-date', 'App\Http\Controllers\PizzaController@aanpassen');

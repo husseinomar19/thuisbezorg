@@ -14,8 +14,9 @@
                      <img src="\asset\img\foto1.jpg" alt="">
                      <h2 class="py-2 text-center">{{$item['naam']}}</h2>
                      <div class="d-flex justify-content-between align-items-center">
-                     <p class="text-dark py-2">{{$item['prijs']}}</p>
-                     <i class="fa-regular fa-heart"></i>
+                     <p class="text-dark">{{$item['prijs']}}</p>
+                     <a class="text-danger" href="{{ route('verwijderen', ['id' => $item->id]) }}">Verwijderen</a>
+                     <a href="{{ route('aanpassen', ['id' => $item->id]) }}">Aanpassen</a>
                      </div>
                   </div>
                </div>
@@ -29,8 +30,9 @@
 
 
 
-
+          
          </div>
       </div>
+
     
 @endsection

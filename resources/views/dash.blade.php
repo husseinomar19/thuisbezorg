@@ -4,8 +4,7 @@
    <div class="hero">
       <div class="dashborad">
          <a href="/toevoegen">Toevoegen</a>
-         <a href="/">Verwijderen</a>
-         <a href="/aanpassen">Aanpassen</a>
+         <a href="/up-date">Menu aanpassen</a> 
       </div>
      
    </div>
