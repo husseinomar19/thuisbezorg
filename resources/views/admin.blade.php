@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+
+
 <div class="admin">
 
  <form action="{{ route('login') }}" class="form_main" method="post">

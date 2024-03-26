@@ -1,6 +1,18 @@
 @extends('layout')
 
 @section('content')
+<?php
+session_start();
+?>
+<?php
+
+if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] == true) {
+    // Voer de gewenste acties uit als de admin is ingelogd
+} else {
+    header('location: /admin');
+    exit; // Stop de verdere uitvoering van de pagina
+}
+?>
 
       <div class="container">
          <div class="row mt-3">
