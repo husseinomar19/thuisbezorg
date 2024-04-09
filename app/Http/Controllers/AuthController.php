@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use  App\Models\User;
+use SebastianBergmann\Type\VoidType;
+use App\Models\contact;
 
 class AuthController extends Controller
 
 {
+    
     public function login(Request $request)
     {
     //     $userName = "hussein";
@@ -56,4 +59,27 @@ if ($request->has('inlog')){
     echo "<script>alert('Onjuiste gegevens'); window.location='/admin';</script>";
 }
     }
+
+
+    // contact function
+
+    public function contact(Request $request){
+        if($request->has('verzenden')){
+        $menu = new contact;
+        $menu->name =  $request->input( 'name' );
+        $menu->email = $request->input( 'email' );
+        $menu->massage = $request->input( 'message' );
+        // $menu->foto = $request->input( 'afbeelding' );
+        $menu->save();
+        
+        return redirect('/');
+        }
+    }
+    public function showmassage(){
+        $pageTitle = "Massage";
+        $massage = contact::all();
+        return view('massage', compact('pageTitle', 'massage'));
+    }
+   
 }
+

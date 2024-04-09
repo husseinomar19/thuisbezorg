@@ -3,13 +3,14 @@
 @section('content')
 <div class="hero">
    <h2>contact pagina</h2>
-   <form class="form">
+   <form class="form" action="{{ route('contact') }}" method="post">
+      @csrf
     <div class="title">Contact us</div>
-    <input type="text" placeholder="Naam" class="input">
-    <input type="text" placeholder="Email" class="input">
-    <textarea placeholder="U bericht"></textarea>
+    <input name="name" type="text" placeholder="Naam" class="input" required>
+    <input name="email" type="text" placeholder="Email" class="input" required>
+    <textarea placeholder="U bericht" name="message" required></textarea>
      
-    <button>Verzenden</button>
+    <button name="verzenden">Verzenden</button>
    </form>
 </div>
    

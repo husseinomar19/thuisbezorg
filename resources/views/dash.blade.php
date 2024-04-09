@@ -14,8 +14,15 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] != true
       <div class="dashborad">
          <a href="/toevoegen">Toevoegen</a>
          <a href="/up-date">Menu aanpassen</a> 
+         <a href="/massage">Berichten</a> 
+      </div>
+
+      <div class="massage">
+
       </div>
      
    </div>
+
+
     
 @endsection

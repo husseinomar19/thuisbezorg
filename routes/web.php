@@ -26,11 +26,13 @@ Route::get('/contact', function () {
     return view('contact',compact('pageTitle'));
 });
 Route::get('/menu', 'App\Http\Controllers\PizzaController@index');
+Route::get('/massage', 'App\Http\Controllers\AuthController@showmassage');
 Route::get('/admin', function () {
     $pageTitle = "Admin";
     return view('admin',compact('pageTitle'));
 });
 Route::post('/admin', 'App\Http\Controllers\AuthController@login')->name('login');
+Route::post('/contact', 'App\Http\Controllers\AuthController@contact')->name('contact');
 
 Route::post('/toevoegen', 'App\Http\Controllers\PizzaController@store')->name('item.store');
 Route::put('/pasmenu/{id}', 'App\Http\Controllers\PizzaController@update')->name('item.update');
